@@ -53,21 +53,12 @@
             <header class="d-flex justify-content-center py-3"> 
                 <ul class="nav nav-pills"> 
                     <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">Home</a></li> 
-                    <li class="nav-item"><a href="./planner.html" class="nav-link">Planner</a></li>
-                    <li class="nav-item"><select name="cars" id="car-select" class="nav-link">
-                        <a href=""><option value="volvo">Batch 01</option></a>
-                        <a href=""><option value="saab" selected>Batch 02</option></a>
-                        <a href=""><option value="mercedes">Batch 03</option></a>
+                    <li class="nav-item"><select name="cars" id="car-select" class="nav-link" onchange="goToPage(this)">
+                        <option value="" selected>Planner</option>
+                        <option value="./batch01.html">Batch 01</option>
+                        <option value="./batch02.html">Batch 02</option>
+                        <option value="./batch03.html">Batch 03</option>
                     </select></li>
-                    <!-- <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"> 
-                        <ul class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px" data-bs-theme="light"> 
-                            <li><a class="dropdown-item rounded-2 active" href="#">Action</a></li> 
-                            <li><a class="dropdown-item rounded-2" href="#">Another action</a></li> 
-                            <li><a class="dropdown-item rounded-2" href="#">Something else here</a></li> 
-                            <li><hr class="dropdown-divider"></li> 
-                            <li><a class="dropdown-item rounded-2" href="#">Separated link</a></li> 
-                        </ul> 
-                    </div>  -->
                     <li class="nav-item"><a href="./subjects.html" class="nav-link">Subjects</a></li> 
                     <li class="nav-item"><a href="./exams.html" class="nav-link">Exams</a></li> 
                     <li class="nav-item"><a href="./contact.html" class="nav-link">Feedback</a></li> 
@@ -101,7 +92,8 @@
                     </tr>
                     <tr>
                         <th>Tuesday</th>
-                        <td colspan="3">EAD LAB</td>
+                        <td colspan="2">MP - I</td>
+                        <td>LIBRARY</td>
                         <td>PQT</td>
                         <td>EEA</td>
                         <td>ES</td>
@@ -111,7 +103,7 @@
                         <td>EAD</td>
                         <td>PE - I</td>
                         <td>PQT</td>
-                        <td colspan="3">DBMS LAB</td>
+                        <td colspan="3">EAD LAB</td>
                     </tr>
                     <tr>
                         <th>Thursday</th>
@@ -124,8 +116,7 @@
                     </tr>
                     <tr>
                         <th>Friday</th>
-                        <td colspan="2">MP - I</td>
-                        <td>LIBRARY</td>
+                        <td colspan="3">DBMS LAB</td>
                         <td>DBMS</td>
                         <td>EAD</td>
                         <td>MENTORING</td>

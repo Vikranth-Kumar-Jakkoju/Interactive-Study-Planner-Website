@@ -4,20 +4,52 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Study Planner</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <style>
+            body {
+                background-image: url("./images/Kungfu\ Panda.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top;
+            }
+        </style>
     </head>
-    <body>
-        <h1>Study Planner</h1>
-        <p>Smart Study Planner helps students organize their study time, track subjects, and manage exams with ease. Designed for simplicity and clarity, this website encourages smart planning and consistent learning.
-Plan smart. Study better. Succeed daily.</p>
-        <fieldset>
-            <legend>Things you can access</legend>
-            <ul  >
-                <li><a href="./planner.html">Planner</a></li>
-                <li><a href="./subjects.html">Subjects</a></li>
-                <li><a href="./exams.html">Examinations</a></li>
-                <li><a href="./contact.html">Feedback</a></li>
-            </ul>
-        </fieldset>
+    <body style="margin-left: 10px;">
+        <div class="container">
+            <header class="d-flex justify-content-center py-3"> 
+                <ul class="nav nav-pills"> 
+                    <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">Home</a></li> 
+                    <li class="nav-item"><select name="cars" id="car-select" class="nav-link" onchange="goToPage(this)">
+                        <option value="" selected>Planner</option>
+                        <option value="./batch01.html">Batch 01</option>
+                        <option value="./batch02.html">Batch 02</option>
+                        <option value="./batch03.html">Batch 03</option>
+                    </select></li>
+                    <li class="nav-item"><a href="./subjects.html" class="nav-link">Subjects</a></li> 
+                    <li class="nav-item"><a href="./exams.html" class="nav-link">Exams</a></li> 
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">Feedback</a></li> 
+                </ul> 
+            </header> 
+        </div>
+        <div class="px-4 py-5 my-5 text-center">
+            <!-- <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">  -->
+            <h1 class="display-5 fw-bold text-body-emphasis" style="color: white;">Study Planner</h1> 
+            <div class="col-lg-6 mx-auto"> 
+                <p class="lead mb-4" style="color: white;">Smart Study Planner helps students organize their study time, track subjects, and manage exams with ease. Designed for simplicity and clarity, this website encourages smart planning and consistent learning. <br>Plan smart. Study better. Succeed daily.</p> 
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> 
+                    <a href="./subjects.html"><button type="button" class="btn btn-primary btn-lg px-4 gap-3" >Subjects</button></a>
+                    <a href="./exams.html"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Examinations</button></a>
+                </div> 
+            </div> 
+        </div>
+        <script>
+            function goToPage(selectElement) {
+                var url = selectElement.value;
+                if (url) {
+                    window.location.href = url; // Redirects the browser to the selected URL
+                }
+            }
+        </script>
     </body>
 </html>
 

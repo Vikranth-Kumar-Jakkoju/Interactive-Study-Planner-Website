@@ -4,8 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Study Planner</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
     <body style="margin-left: 10px;">
+        <div class="container">
+            <header class="d-flex justify-content-center py-3"> 
+                <ul class="nav nav-pills"> 
+                    <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">Home</a></li> 
+                    <li class="nav-item"><select name="cars" id="car-select" class="nav-link" onchange="goToPage(this)">
+                        <option value="" selected>Planner</option>
+                        <option value="./batch01.html">Batch 01</option>
+                        <option value="./batch02.html">Batch 02</option>
+                        <option value="./batch03.html">Batch 03</option>
+                    </select></li>
+                    <li class="nav-item"><a href="./subjects.html" class="nav-link">Subjects</a></li> 
+                    <li class="nav-item"><a href="./exams.html" class="nav-link">Exams</a></li> 
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">Feedback</a></li> 
+                </ul> 
+            </header> 
+        </div>
         <h1>Feedback Section</h1>
         <fieldset>
             <legend>Feedback Form</legend>
@@ -25,5 +42,13 @@
             </table>
             <button type="button" id="submit">Submit</button>
         </fieldset>
+        <script>
+            function goToPage(selectElement) {
+                var url = selectElement.value;
+                if (url) {
+                    window.location.href = url; // Redirects the browser to the selected URL
+                }
+            }
+        </script>
     </body>
 </html>
