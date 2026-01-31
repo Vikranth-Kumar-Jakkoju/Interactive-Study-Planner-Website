@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Study Planner</title>
+        <style>
+            .vertical-text {
+                writing-mode: vertical-lr;
+                text-orientation: upright; /* Keeps characters upright for Western languages */
+                padding: 10px;
+                /*border: 1px solid black;*/
+            }
+            td {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Planner Section</h1>
+        <fieldset>
+            <legend>College Time table</legend>
+            <table style="width: 100%;">
+                <tr>
+                    <th>Something</th>
+                    <th>I</th>
+                    <th>II</th>
+                    <th>III</th>
+                    <th>BREAK</th>
+                    <th>IV</th>
+                    <th>V</th>
+                    <th>VI</th>
+                </tr>
+                <tr>
+                    <th>Monday</th>
+                    <td>PE - I</td>
+                    <td>EEA</td>
+                    <td>PQT</td>
+                    <td rowspan="5" class="vertical-text">LUNCH BREAK</td>
+                    <td>DBMS</td>
+                    <td>LIBRARY</td>
+                    <td>SPORTS</td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td colspan="3">EAD LAB</td>
+                    <td>PQT</td>
+                    <td>EEA</td>
+                    <td>ES</td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td>EAD</td>
+                    <td>PE - I</td>
+                    <td>PQT</td>
+                    <td colspan="3">DBMS LAB</td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td>DBMS</td>
+                    <td>EEA</td>
+                    <td>EAD</td>
+                    <td>PE - I</td>
+                    <td>ES</td>
+                    <td>PQT (T)</td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td colspan="2">MP - I</td>
+                    <td>LIBRARY</td>
+                    <td>DBMS</td>
+                    <td>EAD</td>
+                    <td>MENTORING</td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Weekend Time Table</legend>
+            <table style="width: 100%;">
+                <tr>
+                    <th>Something</th>
+                    <th>Morning</th>
+                    <th>BREAK</th>
+                    <th>Evening</th>
+                </tr>
+                <tr>
+                    <th>Saturday</th>
+                    <td>Study Slot - I</td>
+                    <td rowspan="2">LUNCH BREAK</td>
+                    <td>Study Slot - II</td>
+                </tr>
+                <tr>
+                    <th>Sunday</th>
+                    <td>Study Slot - I</td>
+                    <td>Study Slot - II</td>
+                </tr>
+            </table>
+        </fieldset>
+        <div>
+            <h4>Core Subjects</h4>
+            <ul>
+                <li><b>PQT :</b> Probability and Queueing Theory</li>
+                <li><b>DBMS :</b> Database Management Systems</li>
+                <li><b>EAD :</b> Enterprise Application Development</li>
+                <li><b>EAA :</b> Engineering Economics & Accountancy</li>
+                <li><b>ES :</b> Environmental Science</li>
+            </ul>
+            <h4>Professional Elective - I</h4>
+            <ul>
+                <li>Data Mining</li>
+                <li>Fundamentals of Cryptography</li>
+                <li>Modern Mobile Application Development</li>
+            </ul>
+            <h4>Practical</h4>
+            <ul>
+                <li><b>DBMS LAB :</b> Database Management Systems Lab</li>
+                <li><b>EAD LAB :</b> Enterprise Application Development Lab</li>
+                <li><b>MP - I :</b> Mini Project - I</li>
+            </ul>
+        </div>
+        
+    </body>
+</html>
