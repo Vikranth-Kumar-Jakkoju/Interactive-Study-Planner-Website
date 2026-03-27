@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title>
+    <style>
+        /* Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #title {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        header > nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        header > nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+
+        /* Dropdown logic */
+        #planner-dropdown {
+            position: relative; /* Essential for absolute positioning of child */
+            display: flex;
+            align-items: center;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        #planner-dropdown > nav {
+            position: absolute;
+            /* ALIGNMENT FIXES: */
+            top: 100%;           /* Places top of red box at bottom of parent */
+            left: 50%;          /* Center horizontally relative to parent */
+            transform: translateX(-50%); 
+            
+            background-color: red;
+            display: none;      /* Hidden by default */
+            flex-direction: column;
+            padding: 10px;
+            min-width: 100px;
+            z-index: 10;
+        }
+
+        #planner-dropdown > nav > a {
+            color: white;
+            padding: 8px 12px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        #planner-dropdown:hover > nav {
+            display: flex;      /* Show on hover */
+        }
+
+        /* Login Button */
+        #login-container {
+            display: flex;
+            align-items: center;
+        }
+
+        button {
+            padding: 8px 20px;
+            border-radius: 9999px;
+            border: 1px solid #333;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        /* Page Content */
+        main {
+            padding: 20px;
+        }
+
+        fieldset {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Title -->
+        <h1 id="title">Study Planner</h1>
+
+        <!-- Links to other pages -->
+        <nav>
+            <a href="./index.html">Home</a>
+            <div id="planner-dropdown">
+                <a href="./planner.html">Planner</a>
+                <nav>
+                    <a href="./batch01.html">Batch 01</a>
+                    <a href="./batch02.html">Batch 02</a>
+                    <a href="./batch03.html">Batch 03</a>
+                </nav>
+            </div>
+            <a href="./subjects.html">Subjects</a>
+            <a href="./exams.html">Examinations</a>
+            <a href="./contact.html">Feedback</a>
+        </nav>
+
+        <!-- Login -->
+        <div id="login-container">
+            <button>Login</button>
+        </div>
+    </header>
+
+    <main>
+        <p>Smart Study Planner helps students organize their study time, track subjects, and manage exams with ease. Designed for simplicity and clarity, this website encourages smart planning and consistent learning. Plan smart. Study better. Succeed daily.</p>
+        
+        <fieldset>
+            <legend>Things you can access</legend>
+            <ul>
+                <li><a href="./planner.html">Planner</a>
+                    <ul>
+                        <li><a href="./batch01.html">Batch 01</a></li>
+                        <li><a href="./batch02.html">Batch 02</a></li>
+                        <li><a href="./batch03.html">Batch 03</a></li>
+                    </ul>
+                </li>
+                <li><a href="./subjects.html">Subjects</a></li>
+                <li><a href="./exams.html">Examinations</a></li>
+                <li><a href="./contact.html">Feedback</a></li>
+            </ul>
+        </fieldset>
+    </main>
+</body>
+</html>

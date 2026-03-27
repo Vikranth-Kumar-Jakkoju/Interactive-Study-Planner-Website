@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Study Planner</title>
+        <link rel="stylesheet" href="./header.css">
         <style>
             td {
                 text-align: center;
@@ -19,6 +20,31 @@
         </style>
     </head>
     <body>
+        <header>
+            <!-- Title -->
+            <h1 id="title">Study Planner</h1>
+
+            <!-- Links to other pages -->
+            <nav>
+                <a href="./index.html">Home</a>
+                <div id="planner-dropdown">
+                    <a href="./planner.html" >Planner</a>
+                    <nav>
+                        <a href="./batch01.html">Batch 01</a>
+                        <a href="./batch02.html">Batch 02</a>
+                        <a href="./batch03.html">Batch 03</a>
+                    </nav>
+                </div>
+                <a href="./subjects.html">Subjects</a>
+                <a href="./exams.html">Examinations</a>
+                <a href="./contact.html">Feedback</a>
+            </nav>
+
+            <!-- Login -->
+            <div id="login-container">
+                <button>Login</button>
+            </div>
+        </header>
         <h1>Examinations Section</h1>
         <fieldset>
             <legend>College Exams</legend>
