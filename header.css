@@ -1,0 +1,62 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#title {
+    width: fit-content;
+}
+
+header > nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+header > nav > a {
+    margin: 0 auto;
+    text-decoration: none   ;
+}
+
+#login-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+button {
+    padding: 9px 13px;
+    border-radius: 9999px;
+}
+
+#planner-dropdown {
+    text-align: center;
+    position: relative;
+}
+
+#planner-dropdown > nav {
+    width: max-content; 
+    min-width: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: aliceblue;
+    border-radius: 7%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    padding: 10px;
+}
+
+#planner-dropdown > nav > a {
+    padding: 5px 0;
+    height: fit-content;
+    width: fit-content;
+}
+
+#planner-dropdown:hover > nav {
+    display: flex;
+}
